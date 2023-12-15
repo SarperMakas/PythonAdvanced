@@ -11,15 +11,15 @@ def append_one(obj):
     return obj
 
 @append_one.register(list)
-def _(obj):
+def _(obj: list):
     return obj + [1]
 
 @append_one.register(set)
-def _(obj):
+def _(obj: set):
     return obj.union({1})
 
 @append_one.register(str)
-def _(obj):
+def _(obj: str):
     return obj + "1"
 
 print(append_one([1, 2, 3]))
