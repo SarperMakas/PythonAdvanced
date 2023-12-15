@@ -25,7 +25,7 @@ x, y = 2, 4
 
 addXandY()
 
-# predefined 1 parameter in a functoin that has 2 parameter
+# predefined 1 parameter in a function that has 2 parameter
 
 add2 = partial(add, 2)  # a is predefined as 2 now
 add2(5)
