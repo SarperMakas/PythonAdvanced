@@ -4,7 +4,7 @@ Sometimes called "memoize".
 """
 
 from functools import cache
-import time
+import time, random
 
 @cache
 def add(x, y):
@@ -12,7 +12,7 @@ def add(x, y):
 
     print("running")
     time.sleep(2)
-    return x + y
+    return random.randint(1, 100)
 
 # cache remembers parameter and return value combination (ordering maters)
 # first function is going to run but second one do not run because we already know the return value

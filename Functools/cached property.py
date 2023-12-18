@@ -43,4 +43,5 @@ m = Marksheet(100, 90, 95)
 # cached property is based on class parameters
 print(m.average)
 print(m.average)
+m.grades = (20, 30, 40)
 print(m.average)
