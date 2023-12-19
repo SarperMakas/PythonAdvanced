@@ -11,10 +11,19 @@ def do_something(seconds):
 
 with ThreadPoolExecutor() as executor:
     secs = [5, 4, 3, 2, 1]
+    """
+    # we are not waiting for all of the threads to finish
     results = [executor.submit(do_something, sec) for sec in secs]
 
     for f in as_completed(results):
         print(f.result())
+    """
+
+    # we wait to finish 5 second thread for printing all of the answers
+    results = executor.map(do_something, secs)
+    for result in results:
+        print(result)
+
 
 
 """
