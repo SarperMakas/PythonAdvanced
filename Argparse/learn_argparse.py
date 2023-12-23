@@ -9,6 +9,7 @@ parser.add_argument("-v", "--verbose", help="Provides a verbose desc",
 
 args: Namespace = parser.parse_args()
 
+print(arg.verbose)
 if args.verbose:
     print(f"{args.square} squared is {args.square ** 2}")
 else:
