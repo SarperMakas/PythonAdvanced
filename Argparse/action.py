@@ -13,6 +13,7 @@ parser.add_argument("-v", "--verbose",
                     help="Verbose description. Use -vv for extra verbose",
                     # type=int, can't use with action
                     action="count",  # value is number of v => -v: 1 -vv: 2
+                                     # store_true: True if exist, False if doesn't
                     default=0)
 
 args: Namespace = parser.parse_args()
